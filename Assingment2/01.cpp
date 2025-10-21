@@ -79,11 +79,13 @@ public:
         return currentSize;
     }
 
+    int& operator[](int index) {
+        return data[index];
+    }
+
 };
 
-/**
- * @brief Demonstration of the SimpleList class
- */
+
 int main() {
     SimpleList myList;
 
@@ -106,6 +108,8 @@ int main() {
     cout << "List: ";
     myList.display();
     cout << "Size: " << myList.getSize() << endl;
+
+    cout << myList[3] << endl;
 
     return 0;
 }
