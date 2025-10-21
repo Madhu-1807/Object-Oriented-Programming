@@ -11,20 +11,11 @@ using namespace std;
 
 class Person {
 protected:
-    char name[100];
-
-    void StringCopy(char* dest, const char* src, int destSize) {
-        int i = 0;
-        while (src[i] != '\0' && i < (destSize - 1)) {
-            dest[i] = src[i];
-            i++;
-        }
-        dest[i] = '\0';
-    }
+    string name;
 
 public:
-    Person(const char* n) {
-        StringCopy(name, n, 100);
+    Person(string n) {
+        name = n;
     }
 
     void displayPerson() {
@@ -39,7 +30,7 @@ protected:
 
 public:
     // The constructor for Employee  calls the constructor for Person.
-    Employee(const char* n, int id) : Person(n) {
+    Employee(string n, int id) : Person(n) {
         employeeID = id;
     }
 
@@ -52,16 +43,11 @@ public:
 
 class Manager : public Employee {
 private:
-    char department[100];
+    string department;
 
 public:
-    Manager(const char* n, int id, const char* dept) : Employee(n, id) {
-        int i = 0;
-        while (dept[i] != '\0' && i < 99) {
-            department[i] = dept[i];
-            i++;
-        }
-        department[i] = '\0';
+    Manager(string n, int id, string dept) : Employee(n, id) {
+        department = dept;
     }
 
     void displayManager() {
@@ -70,9 +56,6 @@ public:
     }
 };
 
-/**
- * @brief Main function to demonstrate the inheritance chain.
- */
 int main() {
     Manager mgr("Alice Smith", 901, "Engineering");
 

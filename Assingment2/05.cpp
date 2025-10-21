@@ -11,18 +11,11 @@ using namespace std;
 
 class Person {
 protected:
-    char name[100];
-    void StringCopy(char* dest, const char* src, int destSize) {
-        int i = 0;
-        while (src[i] != '\0' && i < (destSize - 1)) {
-            dest[i] = src[i];
-            i++;
-        }
-        dest[i] = '\0';
-    }
+    string name;
+
 public:
-    Person(const char* n) {
-        StringCopy(name, n, 100);
+    Person(string n) {
+        name = n;
     }
     void display() {
         cout << "Name: " << name << endl;
@@ -32,10 +25,10 @@ public:
 
 class Athlete : public virtual Person { // Note the 'virtual' keyword
 protected:
-    char sport[100];
+    string sport;
 public:
-    Athlete(const char* n, const char* s) : Person(n) {
-        StringCopy(sport, s, 100);
+    Athlete(string n, string s) : Person(n) {
+        sport = s;
     }
     void displaySport() {
         cout << "Sport: " << sport << endl;
@@ -46,7 +39,7 @@ public:
 class SportsPerson : public virtual Person, public Athlete { // Note 'virtual'
 public:
     
-    SportsPerson(const char* n, const char* s): Person(n), Athlete(n, s) {} // This calls the Athlete constructor.
+    SportsPerson(string n, string s): Person(n), Athlete(n, s) {} // This calls the Athlete constructor.
 
     void displayAll() {
         display();      
