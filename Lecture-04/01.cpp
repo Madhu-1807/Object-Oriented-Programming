@@ -2,6 +2,7 @@
 #include<string>
 
 using namespace std;
+
 class bank_account
 {
     private:
@@ -9,8 +10,16 @@ class bank_account
         float bal;
     public: 
 
+        bank_account(){
+            name = "Null";
+            bal = 0.0;
+        }
+        
+        bank_account(string n){
+            this->name = n;
+        }
 
-        bank_account(string n,float b){
+        bank_account(string n,float b){    //constructors
           this->name = n;
           this->bal = b;
         }
@@ -38,10 +47,14 @@ int main()
 {
     bank_account a1("Madhu",1000.00);
     bank_account a2("Sahanaa",10000.00);
+    bank_account a3;
     
     a1.get_values();
     a2.get_values();
-    a1.deposit(450.00);
+    a3.get_values();
+
+   /*
+   a1.deposit(450.00);
     a2.deposit(450.00);
     a1.get_values();
     a2.get_values();
@@ -49,5 +62,6 @@ int main()
     a2.withdraw(500);
     a1.get_values();
     a2.get_values();
+    */ 
     return 0;
 }
