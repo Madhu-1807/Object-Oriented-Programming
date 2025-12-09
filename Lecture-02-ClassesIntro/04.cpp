@@ -1,6 +1,7 @@
 #include<iostream>
 #include<string>
 using namespace std;
+
 class details{
   private:
     int m1;
@@ -8,8 +9,8 @@ class details{
     int m3;
     int m4;
     int m5;
-    void greet(){
-      cout <<"Hello"<<endl;
+    void greet(){      // private method
+      cout <<"Hello"<< endl;
     }
     
     string name;
@@ -31,14 +32,14 @@ class details{
       
     }
 
-    void get_greet(){
-      greet();
+    void get_greet(){     //defined 
+      greet();            // to acces the private member
     }
 };
 
 
 int main(){
-  details s1;
-  s1.get_greet();
+  details s1;  
+  s1.get_greet();   
   return 0;
 }

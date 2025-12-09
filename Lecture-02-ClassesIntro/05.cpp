@@ -25,11 +25,8 @@ class details{
     }
 
     void get_value(void){
-
       cout << "name: " << name << "\nmarks: " << marks <<"\ncity: " << city << "\nstate: " << state << endl;
     }
-
-
 };
 
 
@@ -37,6 +34,4 @@ int main(){
   details s1;
   s1.set_value();
   s1.get_value();
-
-  
 }

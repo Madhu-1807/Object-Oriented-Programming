@@ -8,7 +8,6 @@ class details{
     int m3;
     int m4;
     int m5;
-    
     string name;
 
   public: 

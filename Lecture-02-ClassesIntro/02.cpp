@@ -8,7 +8,7 @@ class details{
     string name;
 
   public: 
-    void set_value(int rn,float mr,string nm){
+    void set_value(int rn,float mr,string nm){   // assignment method
       roll_no = rn;
       marks = mr;
       name = nm;
@@ -17,9 +17,6 @@ class details{
     void get_value(void){
       cout << "name: " << name << " marks: " << marks <<" rollno: " << roll_no << endl;
     }
-
-
-
 };
 
 
