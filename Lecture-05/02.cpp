@@ -3,6 +3,8 @@
 
 using namespace std;
 
+//Static member
+
 class Complex{
   private:
     int x;
@@ -28,8 +30,10 @@ class Complex{
 int Complex :: totalObjects = 0;
 
 int main(){
-  Complex c1(56,74);
-  Complex c2(98,89);
+  Complex c1(56,74);  //x=56,y =74 Total=3
+  Complex c2(98,89);  //x=98,y=89 Total=3
+  Complex c3(45,23);  //x=45 y=23 Total=3
   c1.get_numbers();
   c2.get_numbers();
+  c3.get_numbers();
 }
