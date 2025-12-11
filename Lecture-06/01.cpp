@@ -13,7 +13,6 @@ class temple_run{
             cout<<"Game started with score: "<<score<<endl;
         }
         friend void bonus(temple_run* t);
-
 };
 
 void temple_run ::left(void){
@@ -39,5 +38,6 @@ int main(){
     p1.right();
     p1.get_score();
     bonus(&p1);
+    p1.get_score();
     return 0;
 }
